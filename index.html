@@ -1,429 +1,220 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no">
-<title>2026年07月02日 财经晨报</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日财经早报 - 2026年07月02日</title>
 <style>
-/* ── Reset & Base ──────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; -webkit-text-size-adjust: 100%; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
-  line-height: 1.6;
-  color: #1a1a1a;
-  background: #f7f8fa;
-  -webkit-font-smoothing: antialiased;
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 0 12px 40px;
-}
-
-/* ── Dark Mode ─────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  body { color: #e8e8e8; background: #121212; }
-  .card { background: #1e1e1e; }
-  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
-  .section-title { color: #ccc; }
-  .data-row { border-bottom-color: #2a2a2a; }
-  .tag-up { background: rgba(229, 57, 53, 0.2); }
-  .tag-down { background: rgba(67, 160, 71, 0.2); }
-  .footer { color: #666; }
-  .news-digest { color: #aaa; }
-  .overview { color: #ccc; }
-  .unavailable { color: #666; background: #1a1a1a; }
-  .divider { border-top-color: #333; }
-  .event-item { border-left-color: #555; }
-  table th { background: #252525; color: #aaa; }
-  table td { border-bottom-color: #2a2a2a; }
-}
-
-/* ── Header ─────────────────────────────────── */
-.header {
-  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
-  color: #fff;
-  text-align: center;
-  padding: 28px 20px 22px;
-  margin: 0 -12px 16px;
-  position: relative;
-}
-.header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.05em; }
-.header .date { font-size: 0.85rem; opacity: 0.85; margin-top: 4px; }
-.header .weekday { display: inline-block; background: rgba(255,255,255,0.15); border-radius: 10px; padding: 2px 10px; margin-left: 6px; font-size: 0.8rem; }
-
-/* ── Cards ──────────────────────────────────── */
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 16px;
-  margin-bottom: 12px;
-}
-.section-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 10px;
-  padding-left: 8px;
-  border-left: 3px solid #1a237e;
-}
-
-/* ── Market Overview ────────────────────────── */
-.overview { font-size: 0.95rem; line-height: 1.7; color: #333; }
-
-/* ── Data Table ─────────────────────────────── */
-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-table th { background: #f5f5f5; padding: 8px 6px; text-align: right; font-weight: 500; color: #666; font-size: 0.8rem; }
-table th:first-child { text-align: left; }
-table td { padding: 10px 6px; text-align: right; border-bottom: 1px solid #f0f0f0; }
-table td:first-child { text-align: left; font-weight: 500; }
-table tr:last-child td { border-bottom: none; }
-
-/* ── Color Tags ─────────────────────────────── */
-.up { color: #E53935; }
-.down { color: #43A047; }
-.tag-up { background: rgba(229, 57, 53, 0.08); color: #E53935; border-radius: 4px; padding: 1px 6px; font-size: 0.85em; white-space: nowrap; }
-.tag-down { background: rgba(67, 160, 71, 0.08); color: #43A047; border-radius: 4px; padding: 1px 6px; font-size: 0.85em; white-space: nowrap; }
-.flat { color: #999; }
-
-/* ── News List ──────────────────────────────── */
-.news-item { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
-.news-item:last-child { border-bottom: none; }
-.news-title { font-size: 0.95rem; font-weight: 500; line-height: 1.5; }
-.news-title a { color: inherit; text-decoration: none; }
-.news-title a:hover { color: #1a237e; }
-.news-digest { font-size: 0.82rem; color: #888; margin-top: 4px; line-height: 1.5; }
-.news-source { font-size: 0.75rem; color: #999; margin-top: 2px; }
-
-/* ── Events ─────────────────────────────────── */
-.event-item { padding: 8px 0 8px 12px; border-left: 2px solid #e0e0e0; margin-bottom: 6px; font-size: 0.9rem; }
-.event-date { font-size: 0.78rem; color: #999; }
-
-/* ── Risk Warning ───────────────────────────── */
-.risk-warning { font-size: 0.78rem; color: #999; line-height: 1.6; padding: 10px 0; }
-
-/* ── Divider ────────────────────────────────── */
-.divider { border: none; border-top: 1px solid #e0e0e0; margin: 8px 0; }
-
-/* ── Unavailable ────────────────────────────── */
-.unavailable { color: #999; font-size: 0.85rem; font-style: italic; text-align: center; padding: 12px; background: #fafafa; border-radius: 6px; }
-
-/* ── Source Indicator ───────────────────────── */
-.source-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px; }
-.source-dot.live { background: #43A047; }
-.source-dot.stale { background: #FF9800; }
-.source-info { font-size: 0.7rem; color: #aaa; margin-left: 4px; }
-
-/* ── Footer ─────────────────────────────────── */
-.footer { text-align: center; font-size: 0.75rem; color: #999; padding: 20px 0 16px; line-height: 1.8; }
-.footer a { color: #1a237e; text-decoration: none; }
-
-/* ── Responsive tweaks ──────────────────────── */
-@media (max-width: 375px) {
-  body { padding: 0 8px 32px; }
-  .header { margin: 0 -8px 12px; padding: 22px 16px 18px; }
-  .header h1 { font-size: 1.3rem; }
-  table { font-size: 0.82rem; }
-}
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f5f7fa; color:#232832; font-family:'Noto Sans SC','Inter',sans-serif; padding:20px; }
+  .container { max-width:800px; margin:0 auto; }
 </style>
 </head>
 <body>
-
-<!-- ── Header ─────────────────────────────────── -->
-<div class="header">
-  <h1>财经晨报</h1>
-  <div class="date">2026年07月02日<span class="weekday">周四</span></div>
-</div>
-
-<!-- ── Market Overview ────────────────────────── -->
-<div class="card">
-  <div class="section-title">市场概览</div>
-  
-  <p class="overview">今日市场，A股三大指数集体收跌，上证指数跌0.62%报4028.9点，创业板指跌幅较大，达2.86%。港股恒生指数上涨0.76%，报23055.03点。加密货币市场表现强劲，比特币和以太坊24小时涨幅均超4.5%。</p>
-  
-</div>
-
-<!-- ── Major Indices ──────────────────────────── -->
-<div class="card">
-  <div class="section-title">主要指数</div>
-  <table>
-    <thead>
-      <tr><th>指数</th><th>收盘价</th><th>涨跌幅</th><th>涨跌点</th></tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td>上证指数</td>
-        
-        <td>4028.90</td>
-        <td>
-          
-          <span class="down">-0.62%</span>
-          
-        </td>
-        <td>
-          
-          <span class="down">-25.18</span>
-          
-        </td>
-        
-      </tr>
-      
-      <tr>
-        <td>深证成指</td>
-        
-        <td>15498.81</td>
-        <td>
-          
-          <span class="down">-1.47%</span>
-          
-        </td>
-        <td>
-          
-          <span class="down">-231.11</span>
-          
-        </td>
-        
-      </tr>
-      
-      <tr>
-        <td>创业板指</td>
-        
-        <td>4017.27</td>
-        <td>
-          
-          <span class="down">-2.86%</span>
-          
-        </td>
-        <td>
-          
-          <span class="down">-118.07</span>
-          
-        </td>
-        
-      </tr>
-      
-      <tr>
-        <td>恒生指数</td>
-        
-        <td>23055.03</td>
-        <td>
-          
-          <span class="up">+0.76%</span>
-          
-        </td>
-        <td>
-          
-          <span class="up">+174.01</span>
-          
-        </td>
-        
-      </tr>
-      
-      <tr>
-        <td>标普500</td>
-        
-        <td>7483.23</td>
-        <td>
-          
-          <span class="up">+0.06%</span>
-          
-        </td>
-        <td>
-          
-          <span class="up">+4.39</span>
-          
-        </td>
-        
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
-
-<!-- ── Forex & Commodities ────────────────────── -->
-<div class="card">
-  <div class="section-title">外汇与商品</div>
-  <table>
-    <thead>
-      <tr><th>品种</th><th>当前价</th><th>变动</th></tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td>美元/人民币 <span style="font-size:0.75rem;color:#999;">(CNY)</span></td>
-        
-        <td>7.1771</td>
-        <td>
-          
-          <span class="flat">-</span>
-          
-        </td>
-        
-      </tr>
-      
-      <tr>
-        <td>国际黄金 <span style="font-size:0.75rem;color:#999;">(USD/oz)</span></td>
-        
-        <td>4082.86</td>
-        <td>
-          
-          <span class="up">+0.01%</span>
-          
-        </td>
-        
-      </tr>
-      
-      <tr>
-        <td>WTI原油 <span style="font-size:0.75rem;color:#999;">(USD/bbl)</span></td>
-        
-        <td>67.25</td>
-        <td>
-          
-          <span class="down">-1.94%</span>
-          
-        </td>
-        
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
-
-<!-- ── Crypto ─────────────────────────────────── -->
-<div class="card">
-  <div class="section-title">加密资产</div>
-  <table>
-    <thead>
-      <tr><th>资产</th><th>价格 (USD)</th><th>24h 变动</th></tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td>BTC</td>
-        
-        <td>$61226.00</td>
-        <td>
-          
-          <span class="up">+4.51%</span>
-          
-        </td>
-        
-      </tr>
-      
-      <tr>
-        <td>ETH</td>
-        
-        <td>$1643.68</td>
-        <td>
-          
-          <span class="up">+4.66%</span>
-          
-        </td>
-        
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
-
-<!-- ── Macro Events ───────────────────────────── -->
-<div class="card">
-  <div class="section-title">宏观事件日历</div>
-  
-  <p class="unavailable">暂无今日宏观事件数据</p>
-  
-</div>
-
-<!-- ── Top News ───────────────────────────────── -->
-<div class="card">
-  <div class="section-title">重点新闻</div>
-  
-    
-    <div class="news-item">
-      <div class="news-title">
-        
-        精工科技：单关节外骨骼机器人已形成量产能力并投向市场 多关节外骨骼助力机器人第一代样机已完成制作
-        
-      </div>
-      <div class="news-digest">外骨骼机器人量产落地，显示公司技术商业化进展，利好机器人产业链。</div>
-      <div class="news-source">来源：eastmoney</div>
+<div class="container">
+    <!-- Header -->
+    <div style="text-align:center;padding:24px 0 12px;border-bottom:1px solid #e0e4eb;margin-bottom:24px">
+        <div style="font-size:22px;font-weight:700;color:#191e26;margin-bottom:6px">📈 每日财经早报</div>
+        <div style="font-size:13px;color:#828b9e">2026年07月02日</div>
+        <div style="font-size:11px;color:#828b9e;margin-top:2px">生成时间: 2026-07-02 19:58:27</div>
     </div>
     
-    <div class="news-item">
-      <div class="news-title">
-        
-        星网锐捷：预计上半年归母净利润同比增长46.27%-102.90%
-        
-      </div>
-      <div class="news-digest">业绩大幅预增，反映公司盈利能力提升，或受通信设备需求驱动。</div>
-      <div class="news-source">来源：eastmoney</div>
-    </div>
+    <!-- 1. Market Summary -->
     
-    <div class="news-item">
-      <div class="news-title">
-        
-        Truist证券上调SpaceX目标价
-        
-      </div>
-      <div class="news-digest">机构看好SpaceX前景，提振航天及商业发射板块市场情绪。</div>
-      <div class="news-source">来源：eastmoney</div>
-    </div>
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">📋 一句话市场总结</div>
+            <div style="color:#232832;font-size:15px;line-height:1.6">标普500指数收涨1.70%；道琼斯工业指数收跌0.03%；纳斯达克综合指数收涨2.21%。</div>
+        </div>
     
-    <div class="news-item">
-      <div class="news-title">
-        
-        华民股份：受光伏行业周期性影响 产业链价格持续处于低位运行状态
-        
-      </div>
-      <div class="news-digest">光伏行业周期下行，价格低位持续，公司短期承压。</div>
-      <div class="news-source">来源：eastmoney</div>
-    </div>
+    <!-- 2. Global Indices -->
     
-    <div class="news-item">
-      <div class="news-title">
-        
-        碧桂园6月合约销售额24.5亿元
-        
-      </div>
-      <div class="news-digest">销售额数据反映房地产行业销售回暖缓慢，市场信心待修复。</div>
-      <div class="news-source">来源：eastmoney</div>
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">📊 全球核心指数表现</div>
+            
+    <div style="margin-bottom:12px">
+        <div style="font-weight:500;color:#232832;margin-bottom:8px">🇺🇸 美股</div>
+        <table style="width:100%;border-collapse:collapse;font-size:14px">
+            <tr style="color:#828b9e;font-size:12px">
+                <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:left">指数</th>
+                <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:right">最新价</th>
+                <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:right">涨跌幅</th>
+            </tr>
+            
+        <tr>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d">道琼斯工业指数</td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right;font-family:monospace"><span style="color:#232832;font-family:monospace">52305.24</span></td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right"><span style="color:#f85149">▼ 52305.24 (-13.96, -0.03%)</span></td>
+        </tr>
+        <tr>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d">标普500指数</td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right;font-family:monospace"><span style="color:#232832;font-family:monospace">7483.23</span></td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right"><span style="color:#3fb950">▲ 7483.23 (+125.01, +1.70%)</span></td>
+        </tr>
+        <tr>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d">纳斯达克综合指数</td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right;font-family:monospace"><span style="color:#232832;font-family:monospace">26040.031</span></td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right"><span style="color:#3fb950">▲ 26040.031 (+563.39, +2.21%)</span></td>
+        </tr>
+        </table>
     </div>
+    <div>
+        <div style="font-weight:500;color:#232832;margin-bottom:8px">🌏 亚太</div>
+        <table style="width:100%;border-collapse:collapse;font-size:14px">
+            <tr style="color:#828b9e;font-size:12px">
+                <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:left">指数</th>
+                <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:right">最新价</th>
+                <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:right">涨跌幅</th>
+            </tr>
+            
+        <tr>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d">日经225</td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right;font-family:monospace"><span style="color:#232832;font-family:monospace">68733.15</span></td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right"><span style="color:#f85149">▼ 68733.15 (-627.73, -0.91%)</span></td>
+        </tr>
+        <tr>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d">恒生指数</td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right;font-family:monospace"><span style="color:#232832;font-family:monospace">23055.03</span></td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:right"><span style="color:#f85149">▼ 23055.03 (-357.15, -1.53%)</span></td>
+        </tr>
+        </table>
+    </div>
+        </div>
     
-  
+    <!-- 3. Crypto -->
+    
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">₿ 加密货币</div>
+            <div style="color:#828b9e">数据暂未获取</div>
+        </div>
+    
+    <!-- 4. Commodities -->
+    
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">🛢️ 大宗商品</div>
+            <table style="width:100%;border-collapse:collapse;font-size:14px"><tr><td style="padding:6px 8px">🥇 黄金</td><td style="padding:6px 8px;text-align:right;font-family:monospace">国际 $4,068.60/oz<br><span style='font-size:12px;color:#828b9e'>人民币 ¥889.64/克（国际金价汇率折算）</span><br><span style='font-size:12px;color:#828b9e'>黄金ETF(518880): ¥8.475/份（国内可买）</span><br><span style='font-size:11px;color:#f0883e'>⚠ 非上海金交所Au99.99价格</span></td></tr>
+                <tr>
+                    <td style="padding:6px 8px">WTI原油</td>
+                    <td style="padding:6px 8px;text-align:right;font-family:monospace">$67.27</td>
+                    <td style="padding:6px 8px;text-align:right"><span style="color:#f85149">▼ -1.31 (-1.91%)</span></td>
+                </tr>
+                <tr>
+                    <td style="padding:6px 8px">布伦特原油</td>
+                    <td style="padding:6px 8px;text-align:right;font-family:monospace">$70.38</td>
+                    <td style="padding:6px 8px;text-align:right"><span style="color:#f85149">▼ -1.19 (-1.66%)</span></td>
+                </tr></table>
+        </div>
+    
+    <!-- 5. Forex -->
+    
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">💱 外汇行情</div>
+            <table style="width:100%;border-collapse:collapse;font-size:14px"><tr><td style="padding:6px 8px">美元指数 (DXY)</td><td style="padding:6px 8px;text-align:right;font-family:monospace">101.11</td></tr><tr><td style="padding:6px 8px">美元/人民币 (USD/CNY)</td><td style="padding:6px 8px;text-align:right;font-family:monospace">6.8011</td></tr></table>
+        </div>
+    
+    <!-- 6. Bonds -->
+    
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">🏦 债券收益率</div>
+            <table style="width:100%;border-collapse:collapse;font-size:14px"><tr><td style="padding:6px 8px">美债10年期收益率</td><td style="padding:6px 8px;text-align:right;font-family:monospace">4.47%</td></tr><tr><td style="padding:6px 8px">中国国债（储蓄/记账式）</td><td style="padding:6px 8px;text-align:right;color:#828b9e;font-size:12px">关注发行动态</td></tr></table><div style="font-size:12px;color:#828b9e;margin-top:8px;padding:8px;background:#f0f2f5;border-radius:4px">💡 近期可关注的国债信息将放在热点新闻板块。储蓄国债通常每月10日发行，可通过工行/中行/建行等40家银行柜台或网银购买。记账式国债可在二级市场交易。</div>
+        </div>
+    
+    <!-- 7. Deposit Rates -->
+    
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">💰 人民币大额存单利率参考</div>
+            
+    
+    <div style="background:#fef7ed;border:1px solid #f0c040;border-radius:6px;padding:10px;margin-bottom:12px">
+        <div style="color:#b8860b;font-size:13px;font-weight:600">⚠️ 可靠性提醒</div>
+        <div style="color:#b8860b;font-size:12px;margin-top:4px">以下存款利率为银行产品实时报价，会随市场波动。购买前请以各银行 App 最新显示为准。</div>
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:14px">
+        <tr style="color:#828b9e;font-size:12px">
+            <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:left">银行</th>
+            <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:center">1年</th>
+            <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:center">2年</th>
+            <th style="padding:8px 12px;border-bottom:2px solid #e0e4eb;text-align:center">3年</th>
+        </tr>
+        <tr>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d">百信银行</td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:center;font-family:monospace;font-weight:600">1.30%</td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:center;font-family:monospace;font-weight:600">1.40%</td>
+            <td style="padding:8px 12px;border-bottom:1px solid #21262d;text-align:center;font-family:monospace;font-weight:600">1.75%</td>
+        </tr>
+    </table>
+    <div style="font-size:12px;color:#828b9e;margin-top:8px">📅 数据更新: 2026-05-16（百信银行 App 实时报价）</div>
+    <div style="font-size:11px;color:#828b9e;margin-top:4px">其他银行大额存单利率暂未获取</div>
+        </div>
+    
+    <!-- 8. Hot News -->
+    
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">📰 今日头条（中文财经）</div>
+            
+        <div style="padding:10px 0;border-bottom:1px solid #e0e4eb">
+            <div style="display:flex;gap:8px;align-items:flex-start">
+                <div style="background:#286edc;color:#fff;font-size:11px;font-weight:600;min-width:20px;height:20px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</div>
+                <div style="flex:1">
+                    <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:4px;line-height:1.4">普京已获悉打击基辅情况 俄称欧洲正在升级局势</div>
+                    <div style="font-size:11px;color:#828b9e">来源: 华尔街见闻</div>
+                </div>
+            </div>
+        </div>
+        <div style="padding:10px 0;border-bottom:1px solid #e0e4eb">
+            <div style="display:flex;gap:8px;align-items:flex-start">
+                <div style="background:#286edc;color:#fff;font-size:11px;font-weight:600;min-width:20px;height:20px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</div>
+                <div style="flex:1">
+                    <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:4px;line-height:1.4">俄罗斯驻瑞典使馆称遭无人机袭击</div>
+                    <div style="font-size:11px;color:#828b9e">来源: 华尔街见闻</div>
+                </div>
+            </div>
+        </div>
+        <div style="padding:10px 0;border-bottom:1px solid #e0e4eb">
+            <div style="display:flex;gap:8px;align-items:flex-start">
+                <div style="background:#286edc;color:#fff;font-size:11px;font-weight:600;min-width:20px;height:20px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</div>
+                <div style="flex:1">
+                    <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:4px;line-height:1.4">乘联分会：2026年6月，全国新能源乘用车厂商批发销量预估达到151万辆，同比增长22%，环比增长12%，实现两位数双增长，标志着新能源板块在经历前期调整后已进入明确的复苏通道。</div>
+                    <div style="font-size:11px;color:#828b9e">来源: 华尔街见闻</div>
+                </div>
+            </div>
+        </div>
+        <div style="padding:10px 0;border-bottom:1px solid #e0e4eb">
+            <div style="display:flex;gap:8px;align-items:flex-start">
+                <div style="background:#286edc;color:#fff;font-size:11px;font-weight:600;min-width:20px;height:20px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">4</div>
+                <div style="flex:1">
+                    <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:4px;line-height:1.4">王府井：拟以5000万元-1亿元回购股份，回购股份价格不高于15.60元/股。</div>
+                    <div style="font-size:11px;color:#828b9e">来源: 华尔街见闻</div>
+                </div>
+            </div>
+        </div>
+        <div style="padding:10px 0;border-bottom:1px solid #e0e4eb">
+            <div style="display:flex;gap:8px;align-items:flex-start">
+                <div style="background:#286edc;color:#fff;font-size:11px;font-weight:600;min-width:20px;height:20px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">5</div>
+                <div style="flex:1">
+                    <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:4px;line-height:1.4">WTI原油期货跌幅扩大至2%，报67.19美元/桶。</div>
+                    <div style="font-size:11px;color:#828b9e">来源: 华尔街见闻</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    <!-- 9. 关键词监控 -->
+    
+        <div style="background:#ffffff;border:1px solid #e0e4eb;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+            <div style="font-size:14px;font-weight:600;color:#191e26;margin-bottom:12px">🔍 关键词监控</div>
+            
+    <div style="font-size:12px;color:#828b9e;margin-bottom:12px;padding:8px;background:#f0f2f5;border-radius:4px">
+        监控关键词：深圳租金回报率 
+        — 有相关新闻时自动提醒。需要添加新词，跟我说就行。
+    </div><div style="color:#828b9e;font-size:13px;text-align:center;padding:16px">📭 暂无相关新闻</div>
+        </div>
+    
+    <!-- Footer -->
+    <div style="text-align:center;padding:20px 0;border-top:1px solid #e0e4eb;margin-top:24px">
+        <div style="font-size:11px;color:#828b9e;margin-bottom:4px">⚠️ 免责声明：本报告数据来源于公开 API 和网站，仅供参考，不构成投资建议。</div>
+        <div style="font-size:11px;color:#828b9e">数据截止时间: 2026-07-02 19:58:27</div>
+    </div>
 </div>
-
-<!-- ── Data Sources ───────────────────────────── -->
-<div class="card">
-  <div class="section-title">数据来源</div>
-  <div class="footer" style="text-align:left;padding:0;">
-    <p>指数数据：akshare（东方财富、新浪财经）</p>
-    <p>外汇商品：中国银行、国际交易所公开数据</p>
-    <p>加密资产：CoinGecko / Binance 公开行情</p>
-    <p>新闻来源：百度财经、公开财经资讯</p>
-    <p style="margin-top:6px;">数据更新时间：2026-07-02 19:47:37</p>
-    <p style="margin-top:4px;">本报告由自动化引擎生成，仅供信息参考</p>
-  </div>
-</div>
-
-<!-- ── Risk Warning ───────────────────────────── -->
-<div class="card">
-  <div class="section-title">风险提示</div>
-  <p class="risk-warning">
-    本报告所含数据来源于公开信息，仅供参考，不构成投资建议。市场有风险，投资需谨慎。
-    报告中的数据可能存在延迟，投资者应自行核实最新数据并独立判断。过去的市场表现不代表未来收益。
-    加密资产价格波动较大，可能不适合所有投资者。外汇和大宗商品交易亦存在较高风险。
-  </p>
-</div>
-
-<!-- ── Footer ──────────────────────────────────── -->
-<div class="footer">
-  <p>财经日报引擎 · 自动化生成 · 2026年07月02日</p>
-  
-</div>
-
 </body>
 </html>
